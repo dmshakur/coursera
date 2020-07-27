@@ -1,0 +1,1 @@
+python ./run-tests.py &> ./logs/run-tests.log

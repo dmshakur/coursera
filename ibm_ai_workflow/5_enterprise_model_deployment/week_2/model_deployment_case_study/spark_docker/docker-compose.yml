@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  ai_workflow:
+    build: .
+    container_name: ai_workflow
+    volumes:
+      - type: "volume"
+        source: ai_workflow_volume
+        target: /src
+volumes:
+  ai_workflow_volume:

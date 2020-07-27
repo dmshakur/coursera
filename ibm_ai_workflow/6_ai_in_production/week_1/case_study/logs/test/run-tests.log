@@ -1,0 +1,591 @@
+sss/home/dangelo/source_files/anaconda3/lib/python3.7/site-packages/sklearn/utils/deprecation.py:143: FutureWarning: The sklearn.svm.classes module is  deprecated in version 0.22 and will be removed in version 0.24. The corresponding classes / functions should instead be imported from sklearn.svm. Anything that cannot be imported from sklearn.svm is now part of the private API.
+  warnings.warn(message, FutureWarning)
+/home/dangelo/source_files/anaconda3/lib/python3.7/site-packages/sklearn/base.py:334: UserWarning: Trying to unpickle estimator SVC from version 0.21.3 when using version 0.23.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+EEEEEE.E
+======================================================================
+ERROR: test_01_predict_log_creation (LoggerTests.LoggerTest)
+test for nan values
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dangelo/mounted_parts/sda1/Courses/coursera/ibm_ai_workflow/6_ai_in_production/week_1/case_study/unittests/LoggerTests.py", line 28, in test_01_predict_log_creation
+    y_pred_and_proba = model_predict(query)
+  File "/home/dangelo/mounted_parts/sda1/Courses/coursera/ibm_ai_workflow/6_ai_in_production/week_1/case_study/logger.py", line 110, in wrapper
+    predictions = model_fn(*args, **kwargs)
+  File "/home/dangelo/mounted_parts/sda1/Courses/coursera/ibm_ai_workflow/6_ai_in_production/week_1/case_study/model.py", line 84, in model_predict
+    y_pred = model.predict(query)
+  File "/home/dangelo/source_files/anaconda3/lib/python3.7/site-packages/sklearn/svm/_base.py", line 606, in predict
+    if self.break_ties and self.decision_function_shape == 'ovo':
+AttributeError: 'SVC' object has no attribute 'break_ties'
+
+======================================================================
+ERROR: test_02_train_log_creation (LoggerTests.LoggerTest)
+check if train log was automatically created
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dangelo/mounted_parts/sda1/Courses/coursera/ibm_ai_workflow/6_ai_in_production/week_1/case_study/unittests/LoggerTests.py", line 42, in test_02_train_log_creation
+    model_train()
+  File "/home/dangelo/mounted_parts/sda1/Courses/coursera/ibm_ai_workflow/6_ai_in_production/week_1/case_study/logger.py", line 136, in wrapper
+    model = model_fn(*args, **kwargs)
+  File "/home/dangelo/mounted_parts/sda1/Courses/coursera/ibm_ai_workflow/6_ai_in_production/week_1/case_study/model.py", line 38, in model_train
+    X,y = fetch_data()
+  File "/home/dangelo/mounted_parts/sda1/Courses/coursera/ibm_ai_workflow/6_ai_in_production/week_1/case_study/logger.py", line 72, in wrapper
+    create_or_update_log(data, LOG_TYPES['D'])
+  File "/home/dangelo/mounted_parts/sda1/Courses/coursera/ibm_ai_workflow/6_ai_in_production/week_1/case_study/logger.py", line 80, in create_or_update_log
+    raise BadArgumentError(log_type)
+logger.BadArgumentError: (array([[5.1, 3.5],
+       [4.9, 3. ],
+       [4.7, 3.2],
+       [4.6, 3.1],
+       [5. , 3.6],
+       [5.4, 3.9],
+       [4.6, 3.4],
+       [5. , 3.4],
+       [4.4, 2.9],
+       [4.9, 3.1],
+       [5.4, 3.7],
+       [4.8, 3.4],
+       [4.8, 3. ],
+       [4.3, 3. ],
+       [5.8, 4. ],
+       [5.7, 4.4],
+       [5.4, 3.9],
+       [5.1, 3.5],
+       [5.7, 3.8],
+       [5.1, 3.8],
+       [5.4, 3.4],
+       [5.1, 3.7],
+       [4.6, 3.6],
+       [5.1, 3.3],
+       [4.8, 3.4],
+       [5. , 3. ],
+       [5. , 3.4],
+       [5.2, 3.5],
+       [5.2, 3.4],
+       [4.7, 3.2],
+       [4.8, 3.1],
+       [5.4, 3.4],
+       [5.2, 4.1],
+       [5.5, 4.2],
+       [4.9, 3.1],
+       [5. , 3.2],
+       [5.5, 3.5],
+       [4.9, 3.6],
+       [4.4, 3. ],
+       [5.1, 3.4],
+       [5. , 3.5],
+       [4.5, 2.3],
+       [4.4, 3.2],
+       [5. , 3.5],
+       [5.1, 3.8],
+       [4.8, 3. ],
+       [5.1, 3.8],
+       [4.6, 3.2],
+       [5.3, 3.7],
+       [5. , 3.3],
+       [7. , 3.2],
+       [6.4, 3.2],
+       [6.9, 3.1],
+       [5.5, 2.3],
+       [6.5, 2.8],
+       [5.7, 2.8],
+       [6.3, 3.3],
+       [4.9, 2.4],
+       [6.6, 2.9],
+       [5.2, 2.7],
+       [5. , 2. ],
+       [5.9, 3. ],
+       [6. , 2.2],
+       [6.1, 2.9],
+       [5.6, 2.9],
+       [6.7, 3.1],
+       [5.6, 3. ],
+       [5.8, 2.7],
+       [6.2, 2.2],
+       [5.6, 2.5],
+       [5.9, 3.2],
+       [6.1, 2.8],
+       [6.3, 2.5],
+       [6.1, 2.8],
+       [6.4, 2.9],
+       [6.6, 3. ],
+       [6.8, 2.8],
+       [6.7, 3. ],
+       [6. , 2.9],
+       [5.7, 2.6],
+       [5.5, 2.4],
+       [5.5, 2.4],
+       [5.8, 2.7],
+       [6. , 2.7],
+       [5.4, 3. ],
+       [6. , 3.4],
+       [6.7, 3.1],
+       [6.3, 2.3],
+       [5.6, 3. ],
+       [5.5, 2.5],
+       [5.5, 2.6],
+       [6.1, 3. ],
+       [5.8, 2.6],
+       [5. , 2.3],
+       [5.6, 2.7],
+       [5.7, 3. ],
+       [5.7, 2.9],
+       [6.2, 2.9],
+       [5.1, 2.5],
+       [5.7, 2.8],
+       [6.3, 3.3],
+       [5.8, 2.7],
+       [7.1, 3. ],
+       [6.3, 2.9],
+       [6.5, 3. ],
+       [7.6, 3. ],
+       [4.9, 2.5],
+       [7.3, 2.9],
+       [6.7, 2.5],
+       [7.2, 3.6],
+       [6.5, 3.2],
+       [6.4, 2.7],
+       [6.8, 3. ],
+       [5.7, 2.5],
+       [5.8, 2.8],
+       [6.4, 3.2],
+       [6.5, 3. ],
+       [7.7, 3.8],
+       [7.7, 2.6],
+       [6. , 2.2],
+       [6.9, 3.2],
+       [5.6, 2.8],
+       [7.7, 2.8],
+       [6.3, 2.7],
+       [6.7, 3.3],
+       [7.2, 3.2],
+       [6.2, 2.8],
+       [6.1, 3. ],
+       [6.4, 2.8],
+       [7.2, 3. ],
+       [7.4, 2.8],
+       [7.9, 3.8],
+       [6.4, 2.8],
+       [6.3, 2.8],
+       [6.1, 2.6],
+       [7.7, 3. ],
+       [6.3, 3.4],
+       [6.4, 3.1],
+       [6. , 3. ],
+       [6.9, 3.1],
+       [6.7, 3.1],
+       [6.9, 3.1],
+       [5.8, 2.7],
+       [6.8, 3.2],
+       [6.7, 3.3],
+       [6.7, 3. ],
+       [6.3, 2.5],
+       [6.5, 3. ],
+       [6.2, 3.4],
+       [5.9, 3. ]]), array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+       2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+       2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2])) is not a valid argument
+
+======================================================================
+ERROR: test_03_train_logs_archived (LoggerTests.LoggerTest)
+Check that training logs are archived
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dangelo/mounted_parts/sda1/Courses/coursera/ibm_ai_workflow/6_ai_in_production/week_1/case_study/unittests/LoggerTests.py", line 56, in test_03_train_logs_archived
+    model_train()
+  File "/home/dangelo/mounted_parts/sda1/Courses/coursera/ibm_ai_workflow/6_ai_in_production/week_1/case_study/logger.py", line 136, in wrapper
+    model = model_fn(*args, **kwargs)
+  File "/home/dangelo/mounted_parts/sda1/Courses/coursera/ibm_ai_workflow/6_ai_in_production/week_1/case_study/model.py", line 38, in model_train
+    X,y = fetch_data()
+  File "/home/dangelo/mounted_parts/sda1/Courses/coursera/ibm_ai_workflow/6_ai_in_production/week_1/case_study/logger.py", line 72, in wrapper
+    create_or_update_log(data, LOG_TYPES['D'])
+  File "/home/dangelo/mounted_parts/sda1/Courses/coursera/ibm_ai_workflow/6_ai_in_production/week_1/case_study/logger.py", line 80, in create_or_update_log
+    raise BadArgumentError(log_type)
+logger.BadArgumentError: (array([[5.1, 3.5],
+       [4.9, 3. ],
+       [4.7, 3.2],
+       [4.6, 3.1],
+       [5. , 3.6],
+       [5.4, 3.9],
+       [4.6, 3.4],
+       [5. , 3.4],
+       [4.4, 2.9],
+       [4.9, 3.1],
+       [5.4, 3.7],
+       [4.8, 3.4],
+       [4.8, 3. ],
+       [4.3, 3. ],
+       [5.8, 4. ],
+       [5.7, 4.4],
+       [5.4, 3.9],
+       [5.1, 3.5],
+       [5.7, 3.8],
+       [5.1, 3.8],
+       [5.4, 3.4],
+       [5.1, 3.7],
+       [4.6, 3.6],
+       [5.1, 3.3],
+       [4.8, 3.4],
+       [5. , 3. ],
+       [5. , 3.4],
+       [5.2, 3.5],
+       [5.2, 3.4],
+       [4.7, 3.2],
+       [4.8, 3.1],
+       [5.4, 3.4],
+       [5.2, 4.1],
+       [5.5, 4.2],
+       [4.9, 3.1],
+       [5. , 3.2],
+       [5.5, 3.5],
+       [4.9, 3.6],
+       [4.4, 3. ],
+       [5.1, 3.4],
+       [5. , 3.5],
+       [4.5, 2.3],
+       [4.4, 3.2],
+       [5. , 3.5],
+       [5.1, 3.8],
+       [4.8, 3. ],
+       [5.1, 3.8],
+       [4.6, 3.2],
+       [5.3, 3.7],
+       [5. , 3.3],
+       [7. , 3.2],
+       [6.4, 3.2],
+       [6.9, 3.1],
+       [5.5, 2.3],
+       [6.5, 2.8],
+       [5.7, 2.8],
+       [6.3, 3.3],
+       [4.9, 2.4],
+       [6.6, 2.9],
+       [5.2, 2.7],
+       [5. , 2. ],
+       [5.9, 3. ],
+       [6. , 2.2],
+       [6.1, 2.9],
+       [5.6, 2.9],
+       [6.7, 3.1],
+       [5.6, 3. ],
+       [5.8, 2.7],
+       [6.2, 2.2],
+       [5.6, 2.5],
+       [5.9, 3.2],
+       [6.1, 2.8],
+       [6.3, 2.5],
+       [6.1, 2.8],
+       [6.4, 2.9],
+       [6.6, 3. ],
+       [6.8, 2.8],
+       [6.7, 3. ],
+       [6. , 2.9],
+       [5.7, 2.6],
+       [5.5, 2.4],
+       [5.5, 2.4],
+       [5.8, 2.7],
+       [6. , 2.7],
+       [5.4, 3. ],
+       [6. , 3.4],
+       [6.7, 3.1],
+       [6.3, 2.3],
+       [5.6, 3. ],
+       [5.5, 2.5],
+       [5.5, 2.6],
+       [6.1, 3. ],
+       [5.8, 2.6],
+       [5. , 2.3],
+       [5.6, 2.7],
+       [5.7, 3. ],
+       [5.7, 2.9],
+       [6.2, 2.9],
+       [5.1, 2.5],
+       [5.7, 2.8],
+       [6.3, 3.3],
+       [5.8, 2.7],
+       [7.1, 3. ],
+       [6.3, 2.9],
+       [6.5, 3. ],
+       [7.6, 3. ],
+       [4.9, 2.5],
+       [7.3, 2.9],
+       [6.7, 2.5],
+       [7.2, 3.6],
+       [6.5, 3.2],
+       [6.4, 2.7],
+       [6.8, 3. ],
+       [5.7, 2.5],
+       [5.8, 2.8],
+       [6.4, 3.2],
+       [6.5, 3. ],
+       [7.7, 3.8],
+       [7.7, 2.6],
+       [6. , 2.2],
+       [6.9, 3.2],
+       [5.6, 2.8],
+       [7.7, 2.8],
+       [6.3, 2.7],
+       [6.7, 3.3],
+       [7.2, 3.2],
+       [6.2, 2.8],
+       [6.1, 3. ],
+       [6.4, 2.8],
+       [7.2, 3. ],
+       [7.4, 2.8],
+       [7.9, 3.8],
+       [6.4, 2.8],
+       [6.3, 2.8],
+       [6.1, 2.6],
+       [7.7, 3. ],
+       [6.3, 3.4],
+       [6.4, 3.1],
+       [6. , 3. ],
+       [6.9, 3.1],
+       [6.7, 3.1],
+       [6.9, 3.1],
+       [5.8, 2.7],
+       [6.8, 3.2],
+       [6.7, 3.3],
+       [6.7, 3. ],
+       [6.3, 2.5],
+       [6.5, 3. ],
+       [6.2, 3.4],
+       [5.9, 3. ]]), array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+       2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+       2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2])) is not a valid argument
+
+======================================================================
+ERROR: test_04_pred_and_log_entry_count (LoggerTests.LoggerTest)
+check that the 'n' predictions and 'n'
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dangelo/mounted_parts/sda1/Courses/coursera/ibm_ai_workflow/6_ai_in_production/week_1/case_study/unittests/LoggerTests.py", line 75, in test_04_pred_and_log_entry_count
+    predictions = model_predict(query)
+  File "/home/dangelo/mounted_parts/sda1/Courses/coursera/ibm_ai_workflow/6_ai_in_production/week_1/case_study/logger.py", line 110, in wrapper
+    predictions = model_fn(*args, **kwargs)
+  File "/home/dangelo/mounted_parts/sda1/Courses/coursera/ibm_ai_workflow/6_ai_in_production/week_1/case_study/model.py", line 84, in model_predict
+    y_pred = model.predict(query)
+  File "/home/dangelo/source_files/anaconda3/lib/python3.7/site-packages/sklearn/svm/_base.py", line 606, in predict
+    if self.break_ties and self.decision_function_shape == 'ovo':
+AttributeError: 'SVC' object has no attribute 'break_ties'
+
+======================================================================
+ERROR: test_05_check_nan (LoggerTests.LoggerTest)
+Check if there are any NaN values
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dangelo/mounted_parts/sda1/Courses/coursera/ibm_ai_workflow/6_ai_in_production/week_1/case_study/unittests/LoggerTests.py", line 92, in test_05_check_nan
+    train_df = pd.read_csv(os.path.join(CWD, LOG_PATH, LOG_FILE.format(LOG_TYPES['T'])))
+  File "/home/dangelo/source_files/anaconda3/lib/python3.7/site-packages/pandas/io/parsers.py", line 676, in parser_f
+    return _read(filepath_or_buffer, kwds)
+  File "/home/dangelo/source_files/anaconda3/lib/python3.7/site-packages/pandas/io/parsers.py", line 448, in _read
+    parser = TextFileReader(fp_or_buf, **kwds)
+  File "/home/dangelo/source_files/anaconda3/lib/python3.7/site-packages/pandas/io/parsers.py", line 880, in __init__
+    self._make_engine(self.engine)
+  File "/home/dangelo/source_files/anaconda3/lib/python3.7/site-packages/pandas/io/parsers.py", line 1114, in _make_engine
+    self._engine = CParserWrapper(self.f, **self.options)
+  File "/home/dangelo/source_files/anaconda3/lib/python3.7/site-packages/pandas/io/parsers.py", line 1891, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 374, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 674, in pandas._libs.parsers.TextReader._setup_parser_source
+FileNotFoundError: [Errno 2] File ./logs/test/train.log does not exist: './logs/test/train.log'
+
+======================================================================
+ERROR: test_01_train (ModelTests.ModelTest)
+test the train functionality
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dangelo/mounted_parts/sda1/Courses/coursera/ibm_ai_workflow/6_ai_in_production/week_1/case_study/unittests/ModelTests.py", line 21, in test_01_train
+    model_train()
+  File "/home/dangelo/mounted_parts/sda1/Courses/coursera/ibm_ai_workflow/6_ai_in_production/week_1/case_study/logger.py", line 136, in wrapper
+    model = model_fn(*args, **kwargs)
+  File "/home/dangelo/mounted_parts/sda1/Courses/coursera/ibm_ai_workflow/6_ai_in_production/week_1/case_study/model.py", line 38, in model_train
+    X,y = fetch_data()
+  File "/home/dangelo/mounted_parts/sda1/Courses/coursera/ibm_ai_workflow/6_ai_in_production/week_1/case_study/logger.py", line 72, in wrapper
+    create_or_update_log(data, LOG_TYPES['D'])
+  File "/home/dangelo/mounted_parts/sda1/Courses/coursera/ibm_ai_workflow/6_ai_in_production/week_1/case_study/logger.py", line 80, in create_or_update_log
+    raise BadArgumentError(log_type)
+logger.BadArgumentError: (array([[5.1, 3.5],
+       [4.9, 3. ],
+       [4.7, 3.2],
+       [4.6, 3.1],
+       [5. , 3.6],
+       [5.4, 3.9],
+       [4.6, 3.4],
+       [5. , 3.4],
+       [4.4, 2.9],
+       [4.9, 3.1],
+       [5.4, 3.7],
+       [4.8, 3.4],
+       [4.8, 3. ],
+       [4.3, 3. ],
+       [5.8, 4. ],
+       [5.7, 4.4],
+       [5.4, 3.9],
+       [5.1, 3.5],
+       [5.7, 3.8],
+       [5.1, 3.8],
+       [5.4, 3.4],
+       [5.1, 3.7],
+       [4.6, 3.6],
+       [5.1, 3.3],
+       [4.8, 3.4],
+       [5. , 3. ],
+       [5. , 3.4],
+       [5.2, 3.5],
+       [5.2, 3.4],
+       [4.7, 3.2],
+       [4.8, 3.1],
+       [5.4, 3.4],
+       [5.2, 4.1],
+       [5.5, 4.2],
+       [4.9, 3.1],
+       [5. , 3.2],
+       [5.5, 3.5],
+       [4.9, 3.6],
+       [4.4, 3. ],
+       [5.1, 3.4],
+       [5. , 3.5],
+       [4.5, 2.3],
+       [4.4, 3.2],
+       [5. , 3.5],
+       [5.1, 3.8],
+       [4.8, 3. ],
+       [5.1, 3.8],
+       [4.6, 3.2],
+       [5.3, 3.7],
+       [5. , 3.3],
+       [7. , 3.2],
+       [6.4, 3.2],
+       [6.9, 3.1],
+       [5.5, 2.3],
+       [6.5, 2.8],
+       [5.7, 2.8],
+       [6.3, 3.3],
+       [4.9, 2.4],
+       [6.6, 2.9],
+       [5.2, 2.7],
+       [5. , 2. ],
+       [5.9, 3. ],
+       [6. , 2.2],
+       [6.1, 2.9],
+       [5.6, 2.9],
+       [6.7, 3.1],
+       [5.6, 3. ],
+       [5.8, 2.7],
+       [6.2, 2.2],
+       [5.6, 2.5],
+       [5.9, 3.2],
+       [6.1, 2.8],
+       [6.3, 2.5],
+       [6.1, 2.8],
+       [6.4, 2.9],
+       [6.6, 3. ],
+       [6.8, 2.8],
+       [6.7, 3. ],
+       [6. , 2.9],
+       [5.7, 2.6],
+       [5.5, 2.4],
+       [5.5, 2.4],
+       [5.8, 2.7],
+       [6. , 2.7],
+       [5.4, 3. ],
+       [6. , 3.4],
+       [6.7, 3.1],
+       [6.3, 2.3],
+       [5.6, 3. ],
+       [5.5, 2.5],
+       [5.5, 2.6],
+       [6.1, 3. ],
+       [5.8, 2.6],
+       [5. , 2.3],
+       [5.6, 2.7],
+       [5.7, 3. ],
+       [5.7, 2.9],
+       [6.2, 2.9],
+       [5.1, 2.5],
+       [5.7, 2.8],
+       [6.3, 3.3],
+       [5.8, 2.7],
+       [7.1, 3. ],
+       [6.3, 2.9],
+       [6.5, 3. ],
+       [7.6, 3. ],
+       [4.9, 2.5],
+       [7.3, 2.9],
+       [6.7, 2.5],
+       [7.2, 3.6],
+       [6.5, 3.2],
+       [6.4, 2.7],
+       [6.8, 3. ],
+       [5.7, 2.5],
+       [5.8, 2.8],
+       [6.4, 3.2],
+       [6.5, 3. ],
+       [7.7, 3.8],
+       [7.7, 2.6],
+       [6. , 2.2],
+       [6.9, 3.2],
+       [5.6, 2.8],
+       [7.7, 2.8],
+       [6.3, 2.7],
+       [6.7, 3.3],
+       [7.2, 3.2],
+       [6.2, 2.8],
+       [6.1, 3. ],
+       [6.4, 2.8],
+       [7.2, 3. ],
+       [7.4, 2.8],
+       [7.9, 3.8],
+       [6.4, 2.8],
+       [6.3, 2.8],
+       [6.1, 2.6],
+       [7.7, 3. ],
+       [6.3, 3.4],
+       [6.4, 3.1],
+       [6. , 3. ],
+       [6.9, 3.1],
+       [6.7, 3.1],
+       [6.9, 3.1],
+       [5.8, 2.7],
+       [6.8, 3.2],
+       [6.7, 3.3],
+       [6.7, 3. ],
+       [6.3, 2.5],
+       [6.5, 3. ],
+       [6.2, 3.4],
+       [5.9, 3. ]]), array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+       2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+       2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2])) is not a valid argument
+
+======================================================================
+ERROR: test_03_predict (ModelTests.ModelTest)
+test the predict functionality
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dangelo/mounted_parts/sda1/Courses/coursera/ibm_ai_workflow/6_ai_in_production/week_1/case_study/unittests/ModelTests.py", line 44, in test_03_predict
+    result = model_predict(query,model)
+  File "/home/dangelo/mounted_parts/sda1/Courses/coursera/ibm_ai_workflow/6_ai_in_production/week_1/case_study/logger.py", line 110, in wrapper
+    predictions = model_fn(*args, **kwargs)
+  File "/home/dangelo/mounted_parts/sda1/Courses/coursera/ibm_ai_workflow/6_ai_in_production/week_1/case_study/model.py", line 84, in model_predict
+    y_pred = model.predict(query)
+  File "/home/dangelo/source_files/anaconda3/lib/python3.7/site-packages/sklearn/svm/_base.py", line 606, in predict
+    if self.break_ties and self.decision_function_shape == 'ovo':
+AttributeError: 'SVC' object has no attribute 'break_ties'
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.025s
+
+FAILED (errors=7, skipped=3)
